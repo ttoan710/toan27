@@ -1,0 +1,309 @@
+.clear{
+    clear: both;
+}
+body{
+    display: grid;
+    font-size: 17px;
+    border: 1px;
+    padding: 0 5px;
+    margin: 0 auto;
+    width: 1024px;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 1px solid #ccc7c8;
+    border-radius: 5px ;
+    background-image: #fff;
+    padding: 0 5px;
+
+}
+
+aside{
+    margin: 2px;
+    padding:  12px;
+    color: #000;
+    text-align: justify;
+    box-sizing: border-box;
+}
+header{
+    position: relative;
+    height: 100px;
+    border: 1px  solid #ccc7c8;
+    border-radius: 5px 5px;
+    padding: 0 5px;
+    margin-bottom: 2px;
+    background-image: url(/assets/images/header.png);  
+}
+#img-header1{
+    height: 100px;
+    position: absolute;
+    top: -30px;
+    animation-name: img-header1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img-header1{
+    from {left: 80%;}
+    to {left: 30%;}
+}
+#img-header2{
+    height: 70px;
+    position: absolute;
+    top: -5px;
+    animation-name: img-header2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes img-header2{
+    from {left: 80%;}
+    to {left: 45%;}
+}
+#img-header3{
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    animation-name: img-header3;
+    animation-duration: 3s;
+    /* dừng ảnh lại  */
+    animation-fill-mode: forwards; 
+}
+@keyframes img-header3{
+    from {left: 80%;}
+    to {left: 63%;}
+}
+nav {
+    padding-top: 20px;
+    bottom: 10px;
+    position: absolute;
+}
+nav > a{
+    margin: 3px;
+    padding: 2px 4px;
+    height: 20px;
+    font-size: 17px;
+    color: #ed4190;
+    background: #ffffff80;
+    border: solid 1px #fff;
+    text-decoration: none;
+    box-shadow: 0 0 3px #00000066;
+}
+nav  :hover{
+    color: #fff;
+    background-color: #ed4190;
+}
+.nav-search{
+    padding-top: 3px;/* Có phần đệm trên là 3px  */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+}   
+.fa_css{
+    text-align: center;
+    padding: 4px;
+    background-color: #cddc39;
+    min-width: 30px;
+    box-shadow: 0 0 2px #0000004d;
+}
+.nav-search .input{
+    color: #ccc7c8;
+    font-size: 14px;
+}
+.color-white{
+    color: #fff;
+    cursor: pointer;
+}
+.color-pink{
+    color: #ed4190;
+}
+img,video{
+    border-radius: 5px;
+}
+footer{
+    position: relative;
+    margin-top: 2px;
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    /* thay đổi padding 1 sang 10 cho phù hợp */
+    padding: 10px 5px;
+    color: #ccc;
+    text-align: center;
+    line-height: 51px;
+    
+}
+footer > a {
+   color: #ed4190;
+}  
+footer  .img{
+    padding: 10px;
+    right: 60px;
+    bottom: 0px;
+    z-index: 100;
+    position: fixed;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    /* thu nhỏ nó reset */
+    width: 60px;
+}
+/* phần chung tự thấy giống thêm vào h1 h2 h1::after */
+h1 {
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 34px;
+    margin: 12px 0 16px 0px;
+    color: #F90B6D;
+    text-transform: uppercase;
+    font-size: 28px;
+    text-align: center;
+}
+h1 ::after{
+    position: relative;
+    left: 50%;
+    display: block; 
+    content: " "; 
+    width: 200px;
+    height: 3px; 
+    transform: skewX(-12deg) translateX(-50%);
+    background: radial-gradient(#cddc39, #fff);
+    margin: 12px 0px 16px 0px;
+}
+h2 {
+    line-height: 1.05;
+    font-family: sans-serif;
+    font-weight: 300;
+    /* line-height: 24px; */
+    margin: 5px 0px 10px 0;
+    font-size: 28px;
+    color: #F90B6D;
+}
+/* css trangchu.html */
+h3 {
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 5px 0px 10px 0;
+    font-size: 20px;
+    color: #F90B6D;
+    /*  */
+    break-before: column;
+}
+
+.left-img,.right-video{
+    padding: 0 5px;
+    text-align: justify;
+}
+.left-img img{
+    width: 30%;
+}
+.left-img p{
+    /* chỉnh p sang trái chuẩn 3/4 left */
+    float:right;
+    width: 69%;   
+}
+.right-video video{
+    width: 30%;
+    float: right;
+}
+.right-video >p{
+    width: 69%;
+}
+.column-2{
+    column-count: 2;
+}
+.column-4{
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+.column-4 .column-4-child{
+    display: inline-block;
+    border: solid 1px #ed4190;
+    border-radius: 5px;
+    padding-top: 5px;
+    min-width: 24%;
+}
+/* css gioithieu.html */
+.column_left{
+    width: 67%;
+    margin-left: 0;
+    float: left;
+}
+.column_left img{
+    width: 100%;
+}
+.column_right{
+    width: 30%;
+    float: right;
+}
+/* sanpham.html */
+.column-3{
+    column-count: 3;
+}
+.column-3 >div{
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    text-align: justify;
+    padding: 0 12px;
+    min-height: 620px;
+}
+.heading_product,.img-sanpham{
+    text-align: center;
+    width: 100%;
+}
+.buy{
+    text-align: center;
+    background-image: linear-gradient(0, #cddc39, #fff);
+    padding: 11px 38px;
+    margin: 0 -12px;
+    border-radius: 5px;
+}
+/* tintuc */
+.column_left_tintuc{
+    width: 30%;
+    margin: 2px;
+    padding: 5px;
+    text-align: justify;
+}
+.column_right_tintuc{
+    width: 69%;
+    float: right;
+    text-align: left;
+}
+.column_right_tintuc img {
+    width: 30%;
+    float: right;
+    height: 160px;
+}
+h2{
+    /* chỉnh lại cho phù hợp với css */
+    font-size: 24px;
+}
+.column_right_tintuc p{
+    width: 69%;
+}
+/* đăng nhập đăng ký */
+fieldset{
+    border: none;
+    /* dùng margin hay cho text-alian center */
+    margin: 0 238px;
+}
+.img_dangnhap{
+    width: 36%;
+}
+/* lienhe */
+.p-lienhe{
+    /* không có tác dụng nhiều */
+    text-align: justify;
+    margin: 0 24px;
+}
+.gopy{
+    
+    margin: 20px 280px 0;
+}
+
+
